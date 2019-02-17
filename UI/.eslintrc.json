@@ -1,0 +1,26 @@
+{
+  "plugins": [
+    "angular",
+    "jasmine"
+  ],
+  "env": {
+    "browser": true,
+    "angular/mocks": true,
+    "jasmine": true,
+    "protractor": true
+  },
+  "extends": [
+    "airbnb-base/legacy",
+    "plugin:angular/johnpapa",
+    "plugin:jasmine/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 5
+  },
+  "rules": {
+    "linebreak-style": 0, // git will checkout Windows-style, commit Unix-style line endings for me
+    "angular/file-name": 0 // prefer using postfix in file name
+  },
+  "globals": {
+  }
+}
