@@ -1,9 +1,11 @@
 'use strict';
 
-angular.module('e2eApp.version.version-directive', [])
-
-.directive('appVersion', ['version', function(version) {
-  return function(scope, elm, attrs) {
+function appVersion(version) {
+  return function replaceVersion(scope, elm) {
     elm.text(version);
   };
-}]);
+}
+
+angular
+  .module('e2eApp.version.version-directive', [])
+  .directive('appVersion', ['version', appVersion]);

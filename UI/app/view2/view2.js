@@ -1,14 +1,17 @@
 'use strict';
 
-angular.module('e2eApp.view2', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
+function provider($routeProvider) {
   $routeProvider.when('/view2', {
     templateUrl: 'view2/view2.html',
-    controller: 'View2Ctrl'
+    controller: 'View2Controller as View2Ctrl'
   });
-}])
+}
 
-.controller('View2Ctrl', [function() {
+function View2Controller() {
 
-}]);
+}
+
+angular
+  .module('e2eApp.view2', ['ngRoute'])
+  .config(['$routeProvider', provider])
+  .controller('View2Controller', [View2Controller]);

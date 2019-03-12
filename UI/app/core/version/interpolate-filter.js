@@ -1,9 +1,11 @@
 'use strict';
 
-angular.module('e2eApp.version.interpolate-filter', [])
-
-.filter('interpolate', ['version', function(version) {
-  return function(text) {
-    return String(text).replace(/\%VERSION\%/mg, version);
+function interpolateVersion(version) {
+  return function formatText(text) {
+    return String(text).replace(/%VERSION%/mg, version);
   };
-}]);
+}
+
+angular
+  .module('e2eApp.version.interpolate-filter', [])
+  .filter('interpolate', ['version', interpolateVersion]);

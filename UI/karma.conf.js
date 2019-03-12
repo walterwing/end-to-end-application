@@ -1,5 +1,4 @@
-//jshint strict: false
-module.exports = function(config) {
+module.exports = function settings(config) {
   config.set({
 
     basePath: './app',

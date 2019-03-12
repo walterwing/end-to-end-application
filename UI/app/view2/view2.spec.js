@@ -1,16 +1,14 @@
 'use strict';
 
-describe('e2eApp.view2 module', function() {
-
+describe('e2eApp.view2 module', function testView2Module() {
   beforeEach(module('e2eApp.view2'));
 
-  describe('view2 controller', function(){
+  describe('view2 controller', function testView2Controller() {
+    it('should ....', inject(function testController($controller) {
+      // spec body
+      var View2Controller = $controller('View2Controller');
 
-    it('should ....', inject(function($controller) {
-      //spec body
-      var view2Ctrl = $controller('View2Ctrl');
-      expect(view2Ctrl).toBeDefined();
+      expect(View2Controller).toBeDefined();
     }));
-
   });
 });
